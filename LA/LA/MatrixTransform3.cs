@@ -43,9 +43,9 @@ namespace LIN_ALG
         /// <returns>its inverse</returns>
         protected static double[,] MatrixInverse(double[,] mat)
         {
-            Matrix m = new Matrix(mat);
-            Matrix k = m.Inverse();
-            return k;
+            Matrix<double> m = Matrix<double>.Build.DenseOfArray(mat);
+            Matrix<double> k = m.Inverse();
+            return k.ToArray();
         }
 
         /// <summary>
